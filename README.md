@@ -7,6 +7,12 @@ ERC-721 tokens.
 
 ## Installation
 
+1. Install js dependencies. 
+
+```
+npm i
+```
+
 2. Install the Truffle box inside of the directory your just created.
     ```javascript
     truffle unbox hackingbeauty/react-dapp-boilerplate
