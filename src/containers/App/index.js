@@ -39,6 +39,7 @@ class App extends Component {
 
   render() {
     const { web3Provider } = this.state
+
     const isLoading = web3Provider === null
 
     return (
