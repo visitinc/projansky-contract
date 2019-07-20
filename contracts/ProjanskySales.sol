@@ -1,4 +1,5 @@
 pragma solidity ^0.5.3;
+import "../node_modules/openzeppelin-solidity/contracts/token/ERC721/ERC721Full.sol";
 
 contract ProjanskySales {
     event Received(address indexed payer, uint tokenId, uint256 amount, uint256 balance);
@@ -16,9 +17,9 @@ contract ProjanskySales {
     function purchase(uint256 _tokenId) public payable {
         require(msg.sender != address(0) && msg.sender != address(this));
         require(msg.value >= tokenPrices[_tokenId]);
-        require(nftContract.exists(_tokenId));
 
-        address tokenSeller = nftContract.ownerOf(_tokenId);
+        address payable tokenSeller =
+          address(uint160(nftContract.ownerOf(_tokenId)));
         /*
         if (tokenSeller != creator) {
           uint amount = msg.value;
@@ -40,8 +41,7 @@ contract ProjanskySales {
     }
 
     function setTokenPrice(uint256 _tokenId, uint256 _price) public {
-      require(_currentPrice > 0);
-      require(nftContract.exists(_tokenId));
+      require(_price > 0);
       address tokenOwner = nftContract.ownerOf(_tokenId);
       require(msg.sender == tokenOwner); // ensure only token owner can set
       tokenPrices[_tokenId] = _price;
