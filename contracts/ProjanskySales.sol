@@ -9,9 +9,9 @@ contract ProjanskySales {
     ERC721 public nftContract; // the address of the non-fungible token contract
     uint public royaltyPercentage;
 
-    constructor(uint _royaltyPercentage, address _nftAddress) public {
-        royaltyPercentage = _royaltyPercentage;
+    constructor(address _nftAddress, uint _royaltyPercentage) public {
         nftContract = ERC721(_nftAddress);
+        royaltyPercentage = _royaltyPercentage;
     }
 
     function purchase(uint256 _tokenId) public payable {
