@@ -5,7 +5,7 @@ import "./Metadata.sol";
 /**
  * The Token contract does this and that...
  */
-contract Token is ERC721Full {
+contract ProjanskyToken is ERC721Full {
     Metadata metadata;
     constructor(string memory name, string memory symbol, Metadata _metadata) public
         ERC721Full(name, symbol)
