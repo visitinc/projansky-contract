@@ -37,3 +37,10 @@ export function closeRightDrawer() {
     type: constants.CLOSE_RIGHT_DRAWER
   }
 }
+
+export function setAddress(value) {
+  return {
+    type: constants.SET_ADDRESS,
+    value
+  }
+}
