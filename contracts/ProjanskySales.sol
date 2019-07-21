@@ -17,6 +17,7 @@ contract ProjanskySales {
     function purchase(uint256 _tokenId) public payable {
         require(msg.sender != address(0) && msg.sender != address(this));
         require(msg.value >= tokenPrices[_tokenId]);
+        // hello world
 
         address payable tokenSeller =
           address(uint160(nftContract.ownerOf(_tokenId)));
