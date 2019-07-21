@@ -6,38 +6,39 @@ contract ProjanskySales {
 
     mapping (uint256 => uint256) public firstSalePrices; // tokenId -> price mapping
     mapping (uint256 => uint256) public tokenPrices; // tokenId -> price mapping
-    ERC721 public nftContract; // the address of the non-fungible token contract
+    mapping (uint256 => address payable) public tokenCreators;
+    ERC721 public nftContract; // the non-fungible token contract
     uint public royaltyPercentage;
 
     constructor(address _nftAddress, uint _royaltyPercentage) public {
         nftContract = ERC721(_nftAddress);
         royaltyPercentage = _royaltyPercentage;
+
     }
 
     function purchase(uint256 _tokenId) public payable {
         require(msg.sender != address(0) && msg.sender != address(this));
         require(msg.value >= tokenPrices[_tokenId]);
-        // hello world
+        
 
         address payable tokenSeller =
           address(uint160(nftContract.ownerOf(_tokenId)));
 
-        if (tokenSeller != creator) {
-          if(msg.value>initalPrice){
+
+
+         if (tokenCreators[_tokenId] !=tokenSeller) {
+          if(msg.value>firstSalePrices[_tokenId]){//if sale price is greater than initial sale price
           uint amount = msg.value;
-          uint royaltyFee = (msg.value-initalPrice)*(royaltyPercentage/100);
+          uint royaltyFee = (msg.value-firstSalePrices[_tokenId])*(royaltyPercentage/100);
           amount = amount - royaltyFee;
-          creator.transfer(royaltyFee);
-          currentOwner.transfer(amount);
-          owner= msg.sender;
-        }
-        else{
-          
-        }
+          tokenCreators[_tokenId].transfer(royaltyFee);
+          tokenSeller.transfer(amount);
+            }
         }
 
-        if (!firstSalePrices[_tokenId]) {
-          firstSalePrices[_tokenId] = msg.value
+        if (firstSalePrices[_tokenId]==0) {
+          firstSalePrices[_tokenId] = msg.value;
+          tokenCreators[_tokenId] =tokenSeller;
         }
 
         nftContract.safeTransferFrom(tokenSeller, msg.sender, _tokenId);
