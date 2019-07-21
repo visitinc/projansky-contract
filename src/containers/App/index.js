@@ -13,6 +13,7 @@ import {
 import ProgressIndicator        from 'components/ProgressIndicator'
 import theme                    from 'configs/theme/config-theme'
 import HomeView                 from 'containers/HomeView'
+import InterfaceView from 'containers/InterfaceView'
 import Header                   from './components/Header'
 import Footer                   from './components/Footer'
 
@@ -54,6 +55,7 @@ class App extends Component {
               ) : (
                 <Switch>
                   <Route path="/home" component={HomeView} />
+                  <Route path="/interface" component={InterfaceView} />
                   <Redirect from="/" to="/home" />
                 </Switch>
               )}

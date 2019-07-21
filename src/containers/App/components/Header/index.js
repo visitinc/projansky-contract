@@ -7,7 +7,7 @@ import Toolbar              from '@material-ui/core/Toolbar'
 import IconButton           from '@material-ui/core/IconButton'
 import Menu                 from '@material-ui/core/Menu'
 import MenuItem             from '@material-ui/core/MenuItem'
-import AccountCircle        from '@material-ui/icons/AccountCircle'
+import MenuIcon        from '@material-ui/icons/Menu'
 import { appConfig }        from 'configs/config-main'
 import { styles }           from './styles.scss'
 
@@ -32,15 +32,15 @@ class Header extends Component {
           aria-owns={anchorEl ? 'simple-menu' : null}
           onClick={this.handleClick}
         >
-          <AccountCircle />
+          <MenuIcon />
         </IconButton>
         <Menu
           anchorEl={anchorEl}
           open={Boolean(anchorEl)}
           onClose={this.close}
         >
-          <MenuItem data-link="account" onClick={this.goTo}>Menu Option 1</MenuItem>
-          <MenuItem data-link="settings" onClick={this.goTo}>Menu Option 2</MenuItem>
+          <MenuItem data-link="home" onClick={this.goTo}>About</MenuItem>
+          <MenuItem data-link="interface" onClick={this.goTo}>Interface</MenuItem>
         </Menu>
       </div>
     )
@@ -69,9 +69,11 @@ class Header extends Component {
       <div className={styles}>
         <AppBar>
           <Toolbar>
-            <Typography variant="title" color="inherit">
-              {appConfig.name}
-            </Typography>
+            <a href="#" style={{ color: 'white' }}>
+              <Typography variant="title" color="inherit">
+                {appConfig.name}
+              </Typography>
+            </a>
             {menu}
           </Toolbar>
         </AppBar>

@@ -5,7 +5,7 @@ import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 
-class HomeView extends Component {
+class InterfaceView extends Component {
   componentDidMount() {
     const { provider: { web3Provider } } = this.props
     requestAccountAccess(act => console.log(act))
@@ -15,9 +15,22 @@ class HomeView extends Component {
     return (
       <Grid className='container' container spacing={8} alignItems="center">
         <Grid item xs={8}>
-          <h1>Home!</h1>
-          <p>Check out the Projansky contract <a href="#interface">interface</a>.</p>
+          <TextField
+            id="outlined-helperText"
+            label="Contract Address"
+            defaultValue="0xBE56F92aC63B2AB00693f7838f7247383c18d0b5"
+            fullWidth
+            variant="outlined"
+            margin="dense"
+          />
         </Grid>
+        <Grid item xs>
+          <Button variant="contained" fullWidth>
+            View Tokens
+          </Button>
+        </Grid>
+        <form>
+        </form>
       </Grid>
     )
   }
@@ -28,4 +41,4 @@ function mapStateToProps(state) {
     provider: state.provider
   }
 }
-export default connect(mapStateToProps)(HomeView)
+export default connect(mapStateToProps)(InterfaceView)
