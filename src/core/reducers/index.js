@@ -4,7 +4,7 @@ import uiReducer           from 'core/reducers/reducer-ui'
 
 const rootReducer = combineReducers({
   provider: providerReducer,
-  ui: uiReducer
+  ui: uiReducer,
 })
 
 export default rootReducer

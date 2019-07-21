@@ -10,7 +10,13 @@ const initialState = {
     modalKey: ''
   },
   rightDrawerIsOpen: false,
-  address: '0xBE56F92aC63B2AB00693f7838f7247383c18d0b5'
+  address: '0xBE56F92aC63B2AB00693f7838f7247383c18d0b5',
+  tokens: [
+    { id: 1, price: 2, initialPrice: 1, creator: '0xBE56F92aC63B2AB00693f7838f7247383c18d0b5' },
+    { id: 2, price: 3, initialPrice: 1, creator: '0xBE56F92aC63B2AB00693f7838f7247383c18d0b5'},
+    { id: 3, price: 1, initialPrice: 1, creator: '0xBE56F92aC63B2AB00693f7838f7247383c18d0b5' },
+  ]
+
 }
 
 function uiReducer(state = initialState, action) {
