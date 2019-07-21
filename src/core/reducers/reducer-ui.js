@@ -1,5 +1,11 @@
 import constants from 'core/types'
 
+const mockTokens = [
+    { id: 1, price: 2, initialPrice: 1, creator: '0xBE56F92aC63B2AB00693f7838f7247383c18d0b5' },
+    { id: 2, price: 3, initialPrice: 1, creator: '0xBE56F92aC63B2AB00693f7838f7247383c18d0b5' },
+    { id: 3, price: 1, initialPrice: 1, creator: '0xBE56F92aC63B2AB00693f7838f7247383c18d0b5' },
+]
+
 const initialState = {
   modalState: {
     openModal: false,
@@ -11,10 +17,8 @@ const initialState = {
   },
   rightDrawerIsOpen: false,
   address: '0xBE56F92aC63B2AB00693f7838f7247383c18d0b5',
+  contractLoading: false,
   tokens: [
-    { id: 1, price: 2, initialPrice: 1, creator: '0xBE56F92aC63B2AB00693f7838f7247383c18d0b5' },
-    { id: 2, price: 3, initialPrice: 1, creator: '0xBE56F92aC63B2AB00693f7838f7247383c18d0b5' },
-    { id: 3, price: 1, initialPrice: 1, creator: '0xBE56F92aC63B2AB00693f7838f7247383c18d0b5' },
   ]
 
 }
@@ -64,6 +68,16 @@ function uiReducer(state = initialState, action) {
     case constants.SET_ADDRESS:
       return Object.assign({}, state, {
         address: action.value
+      })
+
+    case constants.SET_CONTRACT:
+      return Object.assign({}, state, {
+        tokens: mockTokens
+      })
+
+    case constants.GET_CONTRACT:
+      return Object.assign({}, state, {
+        contractLoading: true
       })
 
     default:

@@ -44,3 +44,21 @@ export function setAddress(value) {
     value
   }
 }
+
+export function getContract() {
+  return {
+    type: constants.GET_CONTRACT
+  }
+}
+
+export function setContract() {
+  return {
+    type: constants.SET_CONTRACT
+  }
+}
+
+export function setContract() {
+  return {
+    type: constants.GET_CONTRACT
+  }
+}
