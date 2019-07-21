@@ -21,8 +21,9 @@ contract ProjanskySales {
 
         address payable tokenSeller =
           address(uint160(nftContract.ownerOf(_tokenId)));
-        /*
+
         if (tokenSeller != creator) {
+          if(msg.value>initalPrice){
           uint amount = msg.value;
           uint royaltyFee = (msg.value-initalPrice)*(royaltyPercentage/100);
           amount = amount - royaltyFee;
@@ -30,12 +31,15 @@ contract ProjanskySales {
           currentOwner.transfer(amount);
           owner= msg.sender;
         }
-        */
-        /*
+        else{
+          
+        }
+        }
+
         if (!firstSalePrices[_tokenId]) {
           firstSalePrices[_tokenId] = msg.value
         }
-        */
+
         nftContract.safeTransferFrom(tokenSeller, msg.sender, _tokenId);
         tokenSeller.transfer(msg.value);
         emit Received(msg.sender, _tokenId, msg.value, address(this).balance);
