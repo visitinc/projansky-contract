@@ -23,6 +23,7 @@ contract ProjanskySales {
         address payable tokenSeller =
           address(uint160(nftContract.ownerOf(_tokenId)));
 
+
         if (tokenSeller != tokenCreators[_tokenId] && msg.value >= firstSalePrices[_tokenId]) {
           // pay royalty if price > initial sale price
           uint royaltyFee = (msg.value - firstSalePrices[_tokenId]) * (royaltyPercentage / 100);
