@@ -57,8 +57,8 @@ export function setContract() {
   }
 }
 
-export function setContract() {
+export function setContractError() {
   return {
-    type: constants.GET_CONTRACT
+    type: constants.SET_CONTRACT_ERROR
   }
 }

@@ -16,10 +16,10 @@ class HomeView extends Component {
     return (
       <Grid className='container' container spacing={8} alignItems="center">
         <Grid item xs={8}>
-          <h1>Home!</h1>
-          <p>Check out the Projansky contract <a href="#interface">interface</a>.</p>
+          <h1>About the Projansky Contract</h1>
+          <p>Use the contract interface <a href="#interface">here</a>.</p>
 
-          <img style = {{ width: 1000}} src={img} />
+          <img style = {{ maxWidth: '100%' }} src={img} />
         </Grid>
       </Grid>
     )
