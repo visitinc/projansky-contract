@@ -19,14 +19,14 @@ contract ProjanskySales {
     function purchase(uint256 _tokenId) public payable {
         require(msg.sender != address(0) && msg.sender != address(this));
         require(msg.value >= tokenPrices[_tokenId]);
-        
+
 
         address payable tokenSeller =
           address(uint160(nftContract.ownerOf(_tokenId)));
 
 
 
-         if (tokenCreators[_tokenId] !=tokenSeller) {
+         if (tokenCreators[_tokenId] !=tokenSeller) {// if seller is not the creator
           if(msg.value>firstSalePrices[_tokenId]){//if sale price is greater than initial sale price
           uint amount = msg.value;
           uint royaltyFee = (msg.value-firstSalePrices[_tokenId])*(royaltyPercentage/100);

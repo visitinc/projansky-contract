@@ -18,6 +18,7 @@ import Typography from '@material-ui/core/Typography';
 import FolderIcon from '@material-ui/icons/Folder';
 import DeleteIcon from '@material-ui/icons/Delete';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import ProjanskySales from "../../contracts/ProjanskySales.json"
 
 class InterfaceView extends Component {
   componentDidMount() {

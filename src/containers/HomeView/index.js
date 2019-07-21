@@ -4,6 +4,7 @@ import { requestAccountAccess } from '../../core/libs/lib-metamask-helper'
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
+import img from '../../assets/images/1_ARRTSA.jpg'
 
 class HomeView extends Component {
   componentDidMount() {
@@ -17,6 +18,8 @@ class HomeView extends Component {
         <Grid item xs={8}>
           <h1>Home!</h1>
           <p>Check out the Projansky contract <a href="#interface">interface</a>.</p>
+
+          <img style = {{ width: 1000}} src={img} />
         </Grid>
       </Grid>
     )
