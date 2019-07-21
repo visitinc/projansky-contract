@@ -1,5 +1,5 @@
 pragma solidity ^0.5.3;
-import "../node_modules/openzeppelin-solidity/contracts/token/ERC721/ERC721Full.sol";
+import "./openzeppelin/token/ERC721/ERC721Full.sol";
 
 contract ProjanskySales {
     event Received(address indexed payer, uint tokenId, uint256 amount, uint256 balance);
