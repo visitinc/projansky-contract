@@ -35,21 +35,21 @@ class HomeView extends Component {
             and participation in its economics after they no longer own it."
           </Typography>
           <Typography variant="h5" paragraph>
-            The Agreement, rather than acting solely as an instrument that "closes a deal", is an operative{' '}
-            set of rights and obligations that opens a relationship between the artist and{' '}
+            The Agreement, rather than acting solely as an instrument that closes a deal, is an operative{' '}
+            set of rights and obligations that establishes a relationship between the artist and{' '}
             the purchaser.
           </Typography>
           <Typography variant="h5" paragraph>
             These rights and obligations, from the perspective of both parties,
             are clearly defined in the introduction to the Agreement:
           </Typography>
-          <Grid xs={10}>
+          <Grid item xs={10}>
             <Typography paragraph variant="subtitle1">WHAT THE AGREEMENT DOES</Typography>
           </Grid>
-          <Grid xs={10}>
+          <Grid item xs={10}>
             <Typography paragraph variant="subtitle1">The Agreement is designed to give the artist:</Typography>
           </Grid>
-          <Grid xs={10}>
+          <Grid item xs={10}>
             <ul>
               <li><Typography variant="body1">
                 15% of any increase in the value of each work each time it is transfered in the future.
@@ -98,12 +98,22 @@ class HomeView extends Component {
               <li><Typography variant="body1">
                 to establish recognition that the artist maintains a moral relationship to the work, even as the collector owns and controls it
               </Typography></li>
-              <li><Typography variant="body1">
+              <li><Typography variant="body1" paragraph>
                 to give assurance to the owner that he is using the work in harmony with the artist's intentions.
               </Typography></li>
             </ul>
           </Grid>
-
+          <Typography variant="h5" paragraph>
+            Some of the language of the Agreement foreshadows the present-day rash of blockchain-based solutions
+            addressing issues of artistic provenance and reproduction rights.
+            For example, see:{' '} 
+            <a href="https://portion.io">Portion</a>,{' '}
+            <a href="https://www.maecenas.co/art-market">Maecenas</a>,{' '}
+            <a href="https://superrare.co">SuperRare</a>,{' '}
+            <a href="https://blockchainartcollective.com">Blockchain Art Collective</a>,{' '}
+            <a href="https://knownorigin.io/">KnownOrigin</a>,{' '}
+            <a href="https://verisart.com/">Verisart</a>, and <a href="https://makersplace.com/">MakersPlace</a>.{' '}
+          </Typography>
           <p>Use the <a href="#interface">contract interface</a>.</p>
           <p>View the <a href="#interface">smart contract source</a>.</p>
           <p>View the <a href="#interface">original contract</a>.</p>

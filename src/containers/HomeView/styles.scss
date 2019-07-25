@@ -1,3 +1,16 @@
 :local(.styles) {
+  .container h1 {
+    font-weight: bold;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  ul li {
+    list-style-type: disc;
+    list-style-position: outside;
+
+  }
 
 }
