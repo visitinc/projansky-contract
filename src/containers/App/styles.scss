@@ -6,14 +6,15 @@
 
 /* global styles go here */
 :global(body) {
-  background: $darkGrey35;
+  background: $background;
   color: $white;
-  font-family: 'Asap-Regular', sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
   .container {
     max-width: 860px;
     padding: 20px;
     margin: 0 auto;
+    margin-bottom: 50px; // for footer
   }
 
   ul {
