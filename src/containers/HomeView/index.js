@@ -75,8 +75,8 @@ class HomeView extends Component {
               </Typography></li>
             </ul>
             <Typography variant="body1" paragraph>
-              The economic benefits would accre to the artist for life, plus the life of a surviving spouse (if any){' '}
-              plus 21 years, so as to benefit the artist's children while they are growing up. The artist would maintain aesthetic 
+              The economic benefits would accrue to the artist for life, plus the life of a surviving spouse (if any){' '}
+              plus 21 years, so as to benefit the artist's children while they are growing up. The artist would maintain aesthetic{' '}
               control only for his/her lifetime.
             </Typography>
             <Typography variant="body1" paragraph>
@@ -104,15 +104,38 @@ class HomeView extends Component {
             </ul>
           </Grid>
           <Typography variant="h5" paragraph>
-            Some of the language of the Agreement foreshadows the present-day rash of blockchain-based solutions
+            Some of the language of the Agreement foreshadows present-day blockchain solutions
             addressing issues of artistic provenance and reproduction rights.
-            For example, see:{' '} 
+            For example, see:{' '}
             <a href="https://portion.io">Portion</a>,{' '}
             <a href="https://www.maecenas.co/art-market">Maecenas</a>,{' '}
             <a href="https://superrare.co">SuperRare</a>,{' '}
             <a href="https://blockchainartcollective.com">Blockchain Art Collective</a>,{' '}
             <a href="https://knownorigin.io/">KnownOrigin</a>,{' '}
+            <a href="https://pixura.io/">Pixura</a>,{' '}
+            <a href="https://snark.art/artworks">snark.art</a>,{' '}
             <a href="https://verisart.com/">Verisart</a>, and <a href="https://makersplace.com/">MakersPlace</a>.{' '}
+          </Typography>
+          <Typography variant="h5" paragraph>
+            Some of these platforms include royalties to artists on secondary sales{' '}
+            (see SuperRare's implementation <a href="https://etherscan.io/address/0x41a322b28d0ff354040e2cbc676f0320d8c8850d#code">here</a>),{' '}
+            some work with established artists to explore blockchain as a medium, and others allow creatives to set up their own "shops".{' '}
+            It's not suprising that so many people are trying to use blockchain to solve art problems:{' '}
+            the self-referential, supposedly independent and immortal blockchain recalls the "chain" of art history.{' '}
+            This <a href="https://arxiv.org/pdf/1906.03263.pdf">academic paper</a> reviews many of these approaches.
+          </Typography>
+          <Typography variant="h5" paragraph>
+            The Agreement's also foreshadows many criticisms of these blockchain platforms...
+          </Typography>
+          <Typography variant="h5" paragraph>
+            does the "good UX" of the platforms listed above obscure the interesting aspects of tokenized art?
+          </Typography>
+          <Typography variant="h5" paragraph>
+            how does the original projansky contract compare to the projansky smart contract?
+            is the smart contract easier to work with? does it do a better or worse job of meeting the Agreement's stated goal of a more equitable art world?
+          </Typography>
+          <Typography variant="h5" paragraph>
+            did projansky + seigelaub get fees for creating the Agreement? should they have?
           </Typography>
           <p>Use the <a href="#interface">contract interface</a>.</p>
           <p>View the <a href="#interface">smart contract source</a>.</p>
