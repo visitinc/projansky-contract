@@ -125,7 +125,7 @@ class HomeView extends Component {
             This <a href="https://arxiv.org/pdf/1906.03263.pdf">academic paper</a> reviews many of these approaches.
           </Typography>
           <Typography variant="h5" paragraph>
-            The Agreement's also foreshadows many criticisms of these blockchain platforms...
+            The Agreement also foreshadows many criticisms of these blockchain platforms...
           </Typography>
           <Typography variant="h5" paragraph>
             does the "good UX" of the platforms listed above obscure the interesting aspects of tokenized art?
