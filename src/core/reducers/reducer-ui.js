@@ -18,9 +18,7 @@ const initialState = {
   rightDrawerIsOpen: false,
   address: '0xBE56F92aC63B2AB00693f7838f7247383c18d0b5',
   contractLoading: false,
-  tokens: [
-  ]
-
+  tokens: mockTokens
 }
 
 function uiReducer(state = initialState, action) {
