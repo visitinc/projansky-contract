@@ -87,7 +87,7 @@
     "remixd": "^0.1.8-alpha.6",
     "sha256": "^0.2.0",
     "truffle-contract": "^3.0.6",
-    "validator": "^10.9.0",
+    "validator": "^13.7.0",
     "web3": "0.20.6",
     "webpack-dev-server": "^3.2.1"
   },
